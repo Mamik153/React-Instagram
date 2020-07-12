@@ -1,0 +1,30 @@
+.imageupload{
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    margin: 10px auto;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border-top: 1px solid lightgray;
+}
+.imageupload__progress{
+    width: 100%;
+}
+.imageupload__header{
+   
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+.imageupload__container{
+    padding: 10px 20px;
+}
+.imageupload__button{
+    width: 100%;
+}
+
+.imageupload__caption{
+    margin-top: 5px;
+}
