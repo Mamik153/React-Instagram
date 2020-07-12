@@ -3,7 +3,6 @@ import './App.css';
 import Post from './components/Post';
 import { db, auth } from './firebase'
 import { makeStyles } from '@material-ui/core/styles';
-//import Modal from '@material-ui/core/Modal';
 import { Modal, Button, Input } from '@material-ui/core';
 import ImageUpload from './components/ImageUpload';
 import InstagramEmbed from 'react-instagram-embed'
@@ -24,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
     fontFamily: 'Roboto',
-    width: 400,
+    width: '70%',
     backgroundColor: theme.palette.background.paper,
     border: 'none',
     padding: theme.spacing(2, 4, 3),
@@ -177,7 +176,7 @@ function App() {
         onClose={() => setUpload(false)}
       >
         <div>
-          {user?.displayName ? <ImageUpload username={user.displayName} /> : '' }
+          {user?.displayName ? <ImageUpload setUpload={setUpload} username={user.displayName} /> : '' }
         </div>
       </Modal>
 

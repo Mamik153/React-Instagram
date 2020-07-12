@@ -5,7 +5,7 @@ import firebase from 'firebase'
 import './imageupload.css'
 
 
-const ImageUpload = ({username}) => {
+const ImageUpload = ({username, setUpload}) => {
 
     const [caption, setCaption] = useState('')
     const [image, setImage] = useState(null)
@@ -45,6 +45,8 @@ const ImageUpload = ({username}) => {
                         setCaption('');
                         setProgress(0);
                         setImage(null);
+                        setUpload(false);
+
                     })
             }
         )
